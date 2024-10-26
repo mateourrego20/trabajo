@@ -3,74 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Usuarios</title>
-    <link rel="stylesheet" href="style.css">
-
+    <title>Login</title>
 </head>
-<style>
-    
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        display: flex;
-        justify-content: center;
-        align-items:center;
-        height: 100vh;
-    }
-    form {
-        background: white;
-        padding: 30px;
-        border-radius: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    input[type="text"], input[type="password"] {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-    }
-    input[type="submit"] {
-        background: #5cb85c;
-        color: white;
-        border: none;
-        padding: 20px;
-        cursor: pointer;
-        border-radius: 10px;
-    }
-    input[type="submit"]:hover {
-        background: #4cae4c;
-    }
-</style>
 <body>
-    <h1>Registro de Usuarios</h1>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #63d355;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            background: rgb(250, 247, 247);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"],input[type="password"],input[type="correo"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #030303;
+            border-radius: 5px;
+        }
+        input[type="button"] {
+            background-color: #5cb85c;
+            color: rgb(0, 37, 248);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        input[type="button"]:hover {
+            background-color: #080808;
+        }
+    </style>
 
-    <form id="registroForm">
-        <label for="nombres">Nombres:</label>
-        <input type="text" id="nombres" required><br>
 
-        <label for="apellidos">Apellidos:</label>
-        <input type="text" id="apellidos" required><br>
-
-        <label for="correo">Correo Electrónico:</label>
-        <input type="email" id="correo" required><br>
+    <h1>Registro</h1>
 
 
-        <label for="contraseña">Contraseña:</label>
-        <input type="password" id="contraseña" required><br>
+    <input type="text" id="username" placeholder="Nombre de usuario" required>
+    <input type="correo" id="correo" placeholder="correo" required>
+    <input type="password" id="password" placeholder="Contraseña" required>
 
-        <label for="genero">Género:</label>
-        <select id="genero" required>
-            <option value="">Seleccione</option>
-            <option value="masculino">Masculino</option>
-            <option value="femenino">Femenino</option>
-            <option value="otro">Otro</option>
-        </select><br>
-
-       
-        <input type="submit" value="registrar">
+    <h1>Selecciona tu género</h1>
+    <form>
+        <label>
+            <input type="radio" name="genero" value="masculino" required>
+            Masculino
+        </label><br>
+        <label>
+            <input type="radio" name="genero" value="femenino" required>
+            Femenino
+        </label><br>
     </form>
     
+    <button onclick="registrar()">Registrar</button>
+
     
+
+    <script src="script.js"></script>
 </body>
 </html>
