@@ -26,11 +26,11 @@ function iniciarSesion() {
         if (usuarioGuardado.username === loginUsername && usuarioGuardado.password === loginPassword) {
             alert('Inicio de sesión exitoso');
         } else {
-            alert('Nombre de usuario o contraseña incorrectos');
+            alert('Nombre de usuario o contraseña incorrectos').value;
         }
     } else {
-        alert('No hay usuarios registrados');
-    }  
+        alert('No hay usuarios registrados').value;
+    }
     window.location.href = "index2.html";
 }
  
