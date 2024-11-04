@@ -11,6 +11,7 @@ function registrar() {
     // Guardar en localStorage
     localStorage.setItem('usuario', JSON.stringify(usuario));
     alert('Usuario registrado con éxito');
+    window.location.href = "/index.html";
 }
 
 function iniciarSesion() {
@@ -28,5 +29,7 @@ function iniciarSesion() {
         }
     } else {
         alert('No hay usuarios registrados');
-    }
+    }  
+    window.location.href = "index2.html";
 }
+ 
