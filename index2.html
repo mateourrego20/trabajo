@@ -40,56 +40,65 @@
     <a id="camisetas" a class="nav-link active" aria-current="page"
     href="camisetas.html">camisetas</a>
     <a href="sibre mi">sobre mi</a>
-    <a id="cerrarsesion" a class="nav-link active" aria-current="page" href="cerrarsesion.html" target="_blank">cerrar secion</a>
+    <div class="banner" id="banner">
+        <h1 id="bienvenida">Bienvenido, Usuario</h1>
+        <button class="btn-cerrar-sesion" onclick="cerrarSesion()">Cerrar sesión</button>
+    </div>
+    <style>
+    .banner {
+        width: 100%;
+        height: 400px;
+        background-image: url('https://estaticos.elcolombiano.com/binrepository/1200x850/1c0/1200d627/none/11101/EJNY/jaime-perez-nacional-campeon_42917332_20230727132924.jpg'); 
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: rgb(2, 255, 57);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        text-align: center;
+    }
+    .banner h1 {
+        font-size: 3em;
+        margin: 0;
+    }
+    .banner p {
+        font-size: 1.5em;
+    }
+    .banner button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 1em;
+        background-color: #53cc6e;
+        border: none;
+        color: rgb(3, 3, 3);
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .banner button:hover {
+        background-color: #43be6c;
+    }
+    </style>
+    <script>
+        // Función para mostrar el nombre del usuario
+        function mostrarNombreUsuario() {
+            const usuarioGuardado = JSON.parse(localStorage.getItem('usuario'));
+            if (usuarioGuardado && usuarioGuardado.username) {
+                document.getElementById('bienvenida').innerText = `Bienvenido, ${usuarioGuardado.username}`;
+            }
+        }
+
+        function cerrarSesion() {
+            alert('Has cerrado sesión con éxito');
+            window.location.href = "index.html"; // Redirige a la página de inicio
+        }
+
+        // Llama a la función al cargar la página
+        mostrarNombreUsuario();
+    </script>
 </nav>
 
-    <style>
-        .banner {
-            width: 100%;
-            height: 400px;
-            background-image: url('https://estaticos.elcolombiano.com/binrepository/1200x850/1c0/1200d627/none/11101/EJNY/jaime-perez-nacional-campeon_42917332_20230727132924.jpg'); 
-            background-size: cover;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: rgb(88, 238, 113);
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            text-align: center;
-        }
-        .banner h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-        .banner p {
-            font-size: 1.5em;
-        }
-        .banner button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 1em;
-            background-color: #53cc6e;
-            border: none;
-            color: rgb(3, 3, 3);
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .banner button:hover {
-            background-color: #43be6c;
-        }
-    </style>
-</head>
-<body>
-
-    
-<div class="banner">
-    <h1>Bienvenido a Tienda Verdolaga</h1>
-    <p>Explora nuestros servicios y ofertas especiales</p>
-    <button onclick="location.href='#inicio'">ver Inicio</button>
-</div>
-
-<h2>En Tienda Verdolaga</h2>
-
+  
 
 <p>
     Descripción: somos una tienda dedicada al orgullo verdolaga para todo aquellos hinchas del 
@@ -208,6 +217,9 @@
 </footer>
  
 
+
+
 </head>
 </body>
 </html>
+ 

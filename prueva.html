@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Banner</title>
+    <style>
+        .banner {
+            width: 100%;
+            height: 400px;
+            background-image: url('https://estaticos.elcolombiano.com/binrepository/1200x850/1c0/1200d627/none/11101/EJNY/jaime-perez-nacional-campeon_42917332_20230727132924.jpg'); 
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: rgb(88, 238, 113);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+        .banner h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .banner p {
+            font-size: 1.5em;
+        }
+        .banner button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #53cc6e;
+            border: none;
+            color: rgb(3, 3, 3);
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .banner button:hover {
+            background-color: #43be6c;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div class="banner" id="banner">
+        <h1 id="bienvenida">Bienvenido, Usuario</h1>
+        <button class="btn-cerrar-sesion" onclick="cerrarSesion()">Cerrar sesión</button>
+    </div>
+
+    <script>
+        // Función para mostrar el nombre del usuario
+        function mostrarNombreUsuario() {
+            const usuarioGuardado = JSON.parse(localStorage.getItem('usuario'));
+            if (usuarioGuardado && usuarioGuardado.username) {
+                document.getElementById('bienvenida').innerText = `Bienvenido, ${usuarioGuardado.username}`;
+            }
+        }
+        // Llama a la función al cargar la página
+        mostrarNombreUsuario();
+    </script>
+
+</body>
+</html>
