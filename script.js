@@ -11,7 +11,8 @@ function registrar() {
     // Guardar en localStorage
     localStorage.setItem('usuario', JSON.stringify(usuario));
     alert('Usuario registrado con éxito');
-    window.location.href = "/index.html";
+    window.location.href = "index.html";
+    
 }
 
 function iniciarSesion() {
