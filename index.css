@@ -1,0 +1,103 @@
+.banner {
+      width: 100%;
+      height: 400px;
+      background-image: url('https://estaticos.elcolombiano.com/binrepository/1200x850/1c0/1200d627/none/11101/EJNY/jaime-perez-nacional-campeon_42917332_20230727132924.jpg'); 
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: rgb(88, 238, 113);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      text-align: center;
+  }
+  .banner h1 {
+      font-size: 3em;
+      margin: 0;
+  }
+  .banner p {
+      font-size: 1.5em;
+  }
+  .banner button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #53cc6e;
+      border: none;
+      color: rgb(3, 3, 3);
+      cursor: pointer;
+      border-radius: 5px;
+  }
+  .banner button:hover {
+      background-color: #43be6c;
+  }
+     .contenedores{
+     display: flex;
+
+  }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 20px;
+    }
+    .reseña {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    .nombre {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+    .calificacion {
+        color: gold;
+    }
+   
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+    footer {
+        background-color: #34d456;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+    .redes-sociales a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-size: 1.2em;
+    }
+    .redes-sociales a:hover {
+        text-decoration: underline;
+    }
+
+    body{
+        font-family: Arial, sans-serif;
+    }
+    nav {
+        background-color: #64ec76;
+        overflow: hidden;
+    }
+    nav a {
+        float: left;
+        display: block;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    nav a:hover {
+        background-color: #91f89e;
+        color: black;
+    }
+ 
+   
