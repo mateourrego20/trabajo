@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="camisetas.html">
     <link rel="stylesheet" href="guayos.html">
     <link rel="stylesheet" href="index.css">
-    
+</head>
 </body>
 </html>
 
@@ -54,6 +54,7 @@
         
         
         <p><img src="https://telemedellin.tv/wp-content/uploads/2024/07/WhatsApp-Image-2024-07-25-at-12.47.49-PM.jpeg" alt="ospina" width="170"></p>
+    </div>
     
 <h1>Reseñas de Clientes</h1>
 
@@ -101,10 +102,18 @@
 <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
 </footer>
  
-<script src="script.js"></script>
+<script>
+    
+ 
+ function mostrarNombreUsuario() {
+     const usuarioGuardado = JSON.parse(localStorage.getItem('usuario'));
+     if (usuarioGuardado && usuarioGuardado.username) {
+         document.getElementById('bienvenida').innerText = `Bienvenid@, ${usuarioGuardado.username}`;
+     }
+    }
+</script>
 
 
-</head>
+
 </body>
 </html>
- 
