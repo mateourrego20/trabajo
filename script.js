@@ -33,19 +33,17 @@ function iniciarSesion() {
     }
     window.location.href = "index2.html";
 }
- 
-    function mostrarNombreUsuario() {
-        const usuarioGuardado = JSON.parse(localStorage.getItem('usuario'));
-        if (usuarioGuardado && usuarioGuardado.username) {
-            document.getElementById('bienvenida').innerText = `Bienvenid@, ${usuarioGuardado.username}`;
-        }
+function mostrarNombreUsuario() {
+    const usuarioGuardado = JSON.parse(localStorage.getItem('usuario'));
+    if (usuarioGuardado && usuarioGuardado.username) {
+        document.getElementById('bienvenida').innerText = `Bienvenid@ ${usuarioGuardado.username}`;
     }
+}
 
-    function cerrarSesion() {
-        alert('Has cerrado sesión con éxito');
-        window.location.href = "index.html"; // Redirige a la página de inicio
-    
+function cerrarSesion() {
+    alert('Has cerrado sesión con éxito');
+    window.location.href = "index.html"; // Redirige a la página de inicio
+}
 
-    // Llama a la función al cargar la página
-    mostrarNombreUsuario();
-  }
+// Llama a la función al cargar la página
+mostrarNombreUsuario();

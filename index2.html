@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="iniciarsesion.html">
     <link rel="stylesheet" href="camisetas.html">
     <link rel="stylesheet" href="guayos.html">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index2.css">
 </head>
 </body>
 </html>
@@ -20,12 +20,14 @@
     <a id="camisetas" a class="nav-link active" aria-current="page"
     href="camisetas.html">camisetas</a>
     <a id="guayos" a class="nav-link active" aria-current="page"
-    href="guayos.html">guayos</a>
+    href="guayos.html">guayos</a> 
     <div class="banner" id="banner">
-        <h1 id="bienvenida">Bienvenido, Usuario</h1>
+        <h1 id="bienvenida">Bienvenido, </h1>
         <button class="btn-cerrar-sesion" onclick="cerrarSesion()">Cerrar sesión</button>
     </div>
 </nav>
+
+ 
 
 <h2>Tienda Verdolaga</h2>
 
@@ -101,19 +103,8 @@
 </div>
 <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
 </footer>
- 
-<script>
-    
- 
- function mostrarNombreUsuario() {
-     const usuarioGuardado = JSON.parse(localStorage.getItem('usuario'));
-     if (usuarioGuardado && usuarioGuardado.username) {
-         document.getElementById('bienvenida').innerText = `Bienvenid@, ${usuarioGuardado.username}`;
-     }
-    }
-</script>
-
-
+  
+<script src="script.js"></script>
 
 </body>
 </html>
